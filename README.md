@@ -9,3 +9,4 @@ This folder contains problems from different courses in LinkedIn learning
 Intermideate problems
 1. dijkstra.cpp: Shortest path algorithm for a graph
 2. merge_sort.cpp: Merge sort algorithm
+3. bubble_sort.py: Bubble sort algorithm
