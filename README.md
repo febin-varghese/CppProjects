@@ -10,3 +10,4 @@ Intermideate problems
 1. dijkstra.cpp: Shortest path algorithm for a graph
 2. merge_sort.cpp: Merge sort algorithm
 3. bubble_sort.py: Bubble sort algorithm
+4. insertion_sort.py: Insertion sort algorithm
