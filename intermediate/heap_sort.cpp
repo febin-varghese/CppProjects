@@ -1,7 +1,7 @@
 /*
-Insertion sort algorithm
+Heap sort algorithm
 Generates an array with a random numbers in the range of 0 to 100.
-Sorts the numbers using insertion sort algorithm.
+Sorts the numbers using heap sort algorithm.
 */
 
 #include <iostream>
@@ -9,13 +9,14 @@ Sorts the numbers using insertion sort algorithm.
 using namespace std;
 
 void printNumbers(int numbers[], int lim);
-void insertionSort(int numbers[], int lim);
+void heapify(int numbers[], int lim, int root_idx);
+void heapSort(int numbers[], int lim);
 int getUserInput(void);
 void swapNumbers(int &, int &);
 
 int main()
 {
-    cout << "Insertion sort algorithm \n";
+    cout << "heap sort algorithm \n";
     const int limit = getUserInput();
     int rand_array[limit];
 
@@ -27,7 +28,7 @@ int main()
     printNumbers(rand_array, limit);
 
     // Sorting
-    insertionSort(rand_array, limit);
+    heapSort(rand_array, limit);
 
     // Check
     bool sorted = true;
@@ -73,17 +74,32 @@ void swapNumbers(int &a, int&b)
     b = temp;
 }
 
-void insertionSort(int numbers[], int lim)
+void heapify(int numbers [], int lim, int root_idx)
 {
-    for(int j=0; j<lim; j++)
+    int largest_node_idx = root_idx;
+    int lft_idx = 2 * root_idx + 1;
+    int rht_idx = 2 * root_idx + 2;
+    if(lft_idx < lim && numbers[lft_idx] > numbers[largest_node_idx])
+        largest_node_idx = lft_idx;
+    if(rht_idx < lim && numbers[rht_idx] > numbers[largest_node_idx])
+        largest_node_idx = rht_idx;
+    if(largest_node_idx != root_idx)
     {
-        if(j == 0)
-            continue;
-        int k = j;
-        while(numbers[k] < numbers[k-1] && k > 0)
-        {
-            swapNumbers(numbers[k], numbers[k-1]);
-            k -= 1;
-        }
+        swapNumbers(numbers[root_idx], numbers[largest_node_idx]);
+        heapify(numbers, lim, largest_node_idx);
     }
+}
+
+void heapSort(int numbers[], int lim)
+{
+    // Build heap
+    for(int idx=lim/2-1; idx>=0; idx--)
+        heapify(numbers, lim, idx);
+    // sort
+    for(int idx=lim-1; idx>0; idx--)
+    {
+        swapNumbers(numbers[idx], numbers[0]);
+        heapify(numbers, idx, 0);
+    }
+
 }
