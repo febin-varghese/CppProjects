@@ -12,3 +12,4 @@ Intermideate problems
 3. bubble_sort.cpp: Bubble sort algorithm
 4. insertion_sort.cpp: Insertion sort algorithm
 5. heap_sort.cpp: Heap sort algorithm
+6. quick_sort.cpp: Quick sort algorithm
