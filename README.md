@@ -14,3 +14,4 @@ Intermideate problems
 5. heap_sort.cpp: Heap sort algorithm
 6. quick_sort_main.cpp: Quick sort algorithm
 7. binary_search.cpp: Binary search algorithm
+8. graph_adj_list.cpp: Graph using adjacency list
