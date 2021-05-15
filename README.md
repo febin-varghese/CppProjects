@@ -16,3 +16,4 @@ Intermideate problems
 7. binary_search.cpp: Binary search algorithm
 8. graph_adj_list.cpp: Graph using adjacency list
 9. bft_tree.cpp: Breadth First Traverse of a binary tree
+10. bucket_sort.cpp: Bucket sort algorithm
