@@ -18,3 +18,4 @@ Intermideate problems
 9. bft_tree.cpp: Breadth First Traverse of a binary tree
 10. bucket_sort.cpp: Bucket sort algorithm
 11. counting_sort.cpp: Counting sort algorithm
+12. dfs_tree.cpp: Depth First search for a binary tree
