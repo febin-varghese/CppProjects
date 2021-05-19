@@ -20,3 +20,4 @@ Intermideate problems
 11. counting_sort.cpp: Counting sort algorithm
 12. dfs_tree.cpp: Depth First search for a binary tree
 13. interpolation_search.cpp: Interpolation search algorithm
+14. binary_exp.cpp: Binary exponentiation algorithm
