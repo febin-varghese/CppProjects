@@ -21,3 +21,4 @@ Intermideate problems
 12. dfs_tree.cpp: Depth First search for a binary tree
 13. interpolation_search.cpp: Interpolation search algorithm
 14. binary_exp.cpp: Binary exponentiation algorithm
+15. fibonacci_search.cpp: Fibonacci search algorithm
